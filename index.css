@@ -1,0 +1,450 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Add a subtle, romantic background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='%23e91e63' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M0 4h4v4H0V4zm8 0h4v4H8V4zm8 0h4v4h-4V4zm8 0h4v4h-4V4zm8 0h4v4h-4V4zm0 8h4v4h-4V12zm-8 0h4v4h-4V12zm-8 0h4v4H0V12zm0 8h4v4H0V20zm8 0h4v4h-4V20zm8 0h4v4h-4V20zm8 0h4v4h-4V20zm0 8h4v4h-4V28zm-8 0h4v4h-4V28zm-8 0h4v4h-4V28zm-8 0h4v4H0V28zM8 32h4v4H8V32zm8 0h4v4h-4V32zm8 0h4v4h-4V32z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 960px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Add a subtle animation to the container */
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  header {
+    background-color: #e91e63;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* Add a slight gradient to the header */
+    background-image: linear-gradient(to right, #e91e63, #c2185b);
+  }
+  
+  header h1 {
+    margin: 0;
+    /* Add a subtle shadow to the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/minio.jpg'); 
+    background-size:contain;
+   
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    /* Add a parallax effect */
+    background-attachment: fixed;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    /* Add a slight bounce animation */
+    animation: bounceIn 1s ease-out;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    /* Add a handwritten-style font */
+    font-family: 'Brush Script MT', cursive;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    /* Add a softer font */
+    font-family: 'Georgia', serif;
+  }
+  
+  .memories {
+    padding: 40px 20px;
+    text-align: center;
+    /* Add a wavy background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,15 C33.3,25,66.6,5,100,15 L100,0 L0,0 Z' style='fill:%23f8bbd0;stroke:none;'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    animation: wave 5s linear infinite;
+  }
+  
+  @keyframes wave {
+    0% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  .memories h2 {
+    margin-bottom: 30px;
+    /* Use a more elegant font */
+    font-family: 'Optima', sans-serif;
+    color: #e91e63;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add a subtle hover effect */
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    
+  }
+  
+  .gallery-item p {
+    padding: 15px;
+    text-align: center;
+    background-color: #f2f2f2;
+    /* Make the text a little smaller and italic */
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* Add a subtle border */
+    border-top: 1px solid #555;
+  }
+  
+  #special-button {
+    background-color: #e91e63;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    /* Add a playful font */
+    font-family: 'Comic Sans MS', cursive;
+    /* Add a yellow glow */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+  }
+  
+  #special-button:hover {
+    background-color: #c2185b;
+    /* Add a slight scale effect */
+    transform: scale(1.1);
+    /* Increase the yellow glow on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.9);
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    /* Add a subtle animation */
+    animation: zoomIn 0.5s ease-out;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .modal-content h2 {
+    color: #3f51b5; 
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 1.1em;
+    color: #757575;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #heart {
+    fill: #e91e63;
+    width: 100px;
+    height: auto;
+    animation: heartbeat 1.5s infinite, fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .minion-eyes {
+    position: relative;
+    width: 60px; 
+    height: 30px; 
+    background-color: #fdd835; 
+    border-radius: 30px 30px 0 0; 
+    margin: 10px auto; 
+    overflow: hidden;
+  }
+  
+  .minion-eye {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #000; 
+    border-radius: 50%;
+    animation: lookAround 3s infinite; 
+  }
+  
+  @keyframes lookAround {
+    0%, 100% {
+      transform: translateX(-50%) translate(0, 0);
+    }
+    25% {
+      transform: translateX(-70%) translateY(-5px);
+    }
+    75% {
+      transform: translateX(-30%) translateY(5px);
+    }
+  }
+  
+  /* New styles for falling hearts */
+  .falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; 
+  }
+  
+  .heart {
+    position: absolute;
+    font-size: 1.5em;
+    color: #e91e63;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  
+  .slick-carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .slick-carousel .slick-slide {
+    margin: 10px;
+  }
+  
+  .slick-carousel .slick-slide img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional: Add navigation arrows */
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+
+  #music-button {
+    background-color: #e91e63;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    /* Add a playful font */
+    font-family: 'Comic Sans MS', cursive;
+    /* Add a yellow glow */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+  }
+  
+  #music-button:hover {
+    background-color: #c2185b;
+    /* Add a slight scale effect */
+    transform: scale(1.1);
+    /* Increase the yellow glow on hover */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.9);
+  }
+  
+
+  .pretty-button {
+    background: linear-gradient(45deg, #ff85a2, #ff4f7a);
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(255, 77, 120, 0.4);
+    position: relative;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.pretty-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 10%, transparent 70%);
+    transition: 0.4s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.pretty-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.pretty-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(255, 77, 120, 0.6);
+}
+
+.pretty-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(255, 77, 120, 0.4);
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+
+}
